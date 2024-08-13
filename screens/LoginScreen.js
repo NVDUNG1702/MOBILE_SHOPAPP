@@ -25,6 +25,7 @@ const LoginScreen = ({ navigation }) => {
   const [formError, setFormError] = useState({ email: '', pass: '' });
   const [isCheck, setIsCheck] = useState(true);
   const [isPopup, setPopup] = useState(false);
+  
   const userSchema = Yup.object().shape({
     email: Yup.string().email('Email không hợp lệ').required('Email không được để trống'),
     pass: Yup.string().min(8, 'Mật khẩu phải có ít nhất 8 ký tự').required('Password không được để trống'),
